@@ -15,6 +15,7 @@
                     </div> <!-- /.col-md-12 -->
                     <?php 
                         $limit = $tx_switch['section_feature_number'];
+						$usecols = 12 / $tx_switch['section_feature_perrow'];
                     $args = array(
                             'post_type'         => 'feature',
                             'post_status'       => 'publish',
@@ -26,7 +27,7 @@
                     
                     <!-- Service Start
                     ================================================== -->
-                    <div class="col-md-4 wow fadeIn" data-wow-delay=".3s"  >
+                    <div class="col-md-<?php echo $usecols; ?> wow fadeIn" data-wow-delay=".3s"  >
                         <div class="block drop-shadow ">
                             <div class="custom-icon">
                                 <img src="<?php echo $text = get_post_meta( $post->ID, '_tx_exp_url', true ); ?>" alt="">
@@ -37,7 +38,7 @@
                             </p>
                             
                         </div>
-                    </div> <!-- /.col-md-4 -->
+                    </div> <!-- /.col-md-<?php echo $usecols; ?> -->
                 <?php endwhile; ?>
                 <?php wp_reset_postdata(); ?>
                 </div> <!--/row -->

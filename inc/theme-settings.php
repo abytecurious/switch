@@ -413,6 +413,18 @@
                 'title' => __('How many posts to display?', 'tx-switch'),
                 'default' => "6",
             ),
+			array(
+                'id' => 'section_feature_perrow',
+                'type' => 'select',
+                'title' => __('How many posts per row?', 'tx-switch'),
+				'options' => array(
+					'2' => 'Two',
+					'3' => 'Three',
+					'4' => 'Four',
+					'6' => 'Six'
+					),
+                'default' => '3',
+            ),
         )
     ));
 
