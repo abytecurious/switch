@@ -2,7 +2,7 @@
     global $tx_switch;
 ?>
 
-    <?php if ($tx_switch['section_about_us_display']) : ?>
+    <?php if ($tx_switch['section_about_display']) : ?>
     <!-- About Start
             ================================================== -->
         <section id="about" style="background-image: url('<?php echo $img = $tx_switch['section_about_us_background']['url']; ?>');">
